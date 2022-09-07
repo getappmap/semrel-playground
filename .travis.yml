@@ -1,0 +1,25 @@
+dist: jammy
+
+language: java
+jdk: openjdk17
+
+# https://github.com/travis-ci/travis-ci/issues/1147#issuecomment-441393807
+if: type != push OR branch = main OR branch =~ /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
+script: /usr/bin/env true
+
+before_deploy:
+- |
+  nvm install --lts \
+    && nvm use --lts \
+    && npm i -g \
+      semantic-release \
+      @semantic-release/git \
+      @semantic-release/changelog \
+      @google/semantic-release-replace-plugin
+deploy:
+- provider: script
+  script: semantic-release
+  on:
+    branch: main
+
