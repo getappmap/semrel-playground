@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/applandinc/semrel-playground/compare/v1.0.0...v1.0.1) (2022-09-08)
+
+
+### Bug Fixes
+
+* Update to 0.0.3 ([20a66da](https://github.com/applandinc/semrel-playground/commit/20a66dac3d0728b32fdd8e8757264eea213c1e46))
+
 # 1.0.0 (2022-09-08)
 
 
