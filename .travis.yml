@@ -19,7 +19,7 @@ before_deploy:
       @google/semantic-release-replace-plugin
 deploy:
 - provider: script
-  script: semantic-release
+  script: semantic-release --debug
   on:
     branch: main
 
